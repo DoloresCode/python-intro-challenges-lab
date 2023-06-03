@@ -26,3 +26,20 @@
 # letter_count('banana')
 #
 # > {'a': 3, 'b': 1, 'n': 2}
+
+def letter_count(word):
+    for letter in word:
+        print(letter)
+letter_count('banana')
+#
+# > {'a': 3, 'b': 1, 'n': 2}
+
+# or
+def letter_count(word):
+    letter_totals = {}
+    for letter in word:
+        if letter in letter_totals:
+            letter_totals[letter] += 1
+        else:
+            letter_totals[letter] = 1
+    return letter_totals
